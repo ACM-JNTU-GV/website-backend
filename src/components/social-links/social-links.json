@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_social_links_social_links",
+  "info": {
+    "icon": "globe-asia",
+    "displayName": "Social Links"
+  },
+  "options": {},
+  "attributes": {
+    "Name_of_social": {
+      "type": "string"
+    },
+    "Social_url": {
+      "type": "string"
+    }
+  }
+}

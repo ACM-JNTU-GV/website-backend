@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "event_tags",
+  "info": {
+    "singularName": "event-tag",
+    "pluralName": "event-tags",
+    "displayName": "Event-tag",
+    "name": "event-tag"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Tag_name": {
+      "type": "string"
+    },
+    "events": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::event.event",
+      "inversedBy": "event_tags"
+    }
+  }
+}

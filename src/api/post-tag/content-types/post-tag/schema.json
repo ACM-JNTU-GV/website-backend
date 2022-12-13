@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "post_tags",
+  "info": {
+    "singularName": "post-tag",
+    "pluralName": "post-tags",
+    "displayName": "Post-tag",
+    "name": "post-tag"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Tag_name": {
+      "type": "string"
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::post.post",
+      "inversedBy": "tags"
+    }
+  }
+}

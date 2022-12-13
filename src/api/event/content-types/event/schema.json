@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event",
+    "name": "event"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Event_name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description": {
+      "type": "richtext",
+      "required": true
+    },
+    "Start_time": {
+      "type": "datetime",
+      "required": true
+    },
+    "End_time": {
+      "type": "datetime",
+      "required": true
+    },
+    "Registration_link": {
+      "type": "string"
+    },
+    "Cover_image": {
+      "type": "media",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "multiple": false,
+      "required": false
+    },
+    "Mini_description": {
+      "type": "text",
+      "required": true
+    },
+    "event_tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::event-tag.event-tag",
+      "mappedBy": "events"
+    },
+    "Slug": {
+      "type": "string"
+    },
+    "Registration_price": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    }
+  }
+}

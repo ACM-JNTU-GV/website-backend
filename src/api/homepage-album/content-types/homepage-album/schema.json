@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepage_albums",
+  "info": {
+    "singularName": "homepage-album",
+    "pluralName": "homepage-albums",
+    "displayName": "Homepage-album",
+    "name": "homepage-album"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "photos": {
+      "type": "media",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "multiple": true,
+      "required": false
+    }
+  }
+}
